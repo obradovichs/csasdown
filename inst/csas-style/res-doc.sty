@@ -241,6 +241,20 @@
   \setcounter{secnumdepth}{5}
 }
 
+\newcommand\ListOfFigures{
+  \thispagestyle{fancyplain}
+  \pagenumbering{roman}
+  \renewcommand{\listfigurename}{\bf \large \vspace{-25mm} LIST OF FIGURES}
+  \addtocontents{lof}{\protect\thispagestyle{fancy}}
+  \begin{center}
+    \listoffigures
+  \end{center}
+  \newpage
+  %% To number subsubheadings
+  \setcounter{secnumdepth}{5}
+}
+
+
 \newcommand\Citation[1]{
   %% Start citation indentation
   \leftskip=3em
@@ -699,6 +713,12 @@ DFO Can.\ Sci.\ Advis.\ Sec.\ Res.\ Doc. \rdYear{}/\rdNumber{}.
 \clearpage
 
 \TableOfContents
+
+\clearpage
+
+\ListOfFigures
+
+% \listoftables
 
 \Main
 
